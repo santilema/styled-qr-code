@@ -7,7 +7,14 @@ import defaultOptions, { RequiredOptions } from './QROptions.js';
 import gradientTypes from '../constants/gradientTypes.js';
 import { QRCode, Gradient, FilterFunction, Options } from '../types';
 import getMode from '../tools/getMode.js';
-import { Canvas, CanvasRenderingContext2D, ExportFormat, RenderOptions, loadImage, Image } from 'skia-canvas';
+import {
+  Canvas,
+  CanvasRenderingContext2D,
+  ExportFormat,
+  RenderOptions,
+  loadImage,
+  Image
+} from 'skia-canvas-typescript';
 import qrcode from 'qrcode-generator';
 import { promises as fs } from 'fs';
 import mergeDeep from '../tools/merge.js';
@@ -105,6 +112,10 @@ export default class QRCanvas {
       const { imageOptions, qrOptions } = this._options;
       const coverLevel = imageOptions.imageSize * errorCorrectionPercents[qrOptions.errorCorrectionLevel];
       const maxHiddenDots = Math.floor(coverLevel * count * count);
+
+      if (!this._image || !this._image.width || !this._image.height) {
+        throw new Error('Invalid image');
+      }
 
       drawImageSize = calculateImageSize({
         originalWidth: this._image.width,
