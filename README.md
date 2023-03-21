@@ -1,3 +1,4 @@
+Forked to inclued type safe version of skia-canvas as dependency.
 # QR Code Styling
 
 JavaScript library for generating QR codes with a logo and styling.
