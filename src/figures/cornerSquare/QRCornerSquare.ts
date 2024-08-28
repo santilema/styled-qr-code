@@ -1,7 +1,7 @@
 import cornerSquareTypes from '../../constants/cornerSquareTypes.js';
 import { CornerSquareType, RotateFigureArgsCanvas, BasicFigureDrawArgsCanvas, DrawArgsCanvas } from '../../types';
 
-import { CanvasRenderingContext2D } from 'skia-canvas-typescript';
+import { CanvasRenderingContext2D } from 'skia-canvas';
 
 export default class QRCornerSquare {
   _context: CanvasRenderingContext2D;

@@ -7,14 +7,7 @@ import defaultOptions, { RequiredOptions } from './QROptions.js';
 import gradientTypes from '../constants/gradientTypes.js';
 import { QRCode, Gradient, FilterFunction, Options } from '../types';
 import getMode from '../tools/getMode.js';
-import {
-  Canvas,
-  CanvasRenderingContext2D,
-  ExportFormat,
-  RenderOptions,
-  loadImage,
-  Image
-} from 'skia-canvas-typescript';
+import { Canvas, CanvasRenderingContext2D, ExportFormat, RenderOptions, loadImage, Image } from 'skia-canvas';
 import qrcode from 'qrcode-generator';
 import { promises as fs } from 'fs';
 import mergeDeep from '../tools/merge.js';

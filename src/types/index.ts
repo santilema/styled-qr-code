@@ -1,4 +1,4 @@
-import type { CanvasRenderingContext2D, Image } from 'skia-canvas-typescript';
+import type { CanvasRenderingContext2D, Image } from 'skia-canvas';
 
 export interface UnknownObject {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
